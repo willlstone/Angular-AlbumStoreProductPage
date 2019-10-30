@@ -1,6 +1,6 @@
 let fs = require('fs');
-let expect = require('chai').expect
-let assert = require('chai').assert
+let expect = require('chai').expect;
+let assert = require('chai').assert;
 
 describe('ProductDescription', function() {
   it(`should have an albumInfo property typed to Album @product-description-albuminfo-property-typed-to-album`, function () {
@@ -10,7 +10,7 @@ describe('ProductDescription', function() {
     } catch (e) {
       assert(false, "ProductDescriptionComponent doesn't exist yet.")
     }
-    let re = /albumInfo\s*\:\s*(\w+)/
+    let re = /albumInfo\s*\:\s*(\w+)/;
     let match = file.match(re);
     assert(Array.isArray(file.match(re)), "The `albumInfo` property doesn't have any type information declared yet.");
 

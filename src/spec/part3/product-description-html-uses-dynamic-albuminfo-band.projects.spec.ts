@@ -79,7 +79,7 @@ describe('ProductDescription', () => {
   it(`should use artist name data from the albumInfo property in the HTML template @product-description-html-uses-dynamic-albuminfo-band`, async(() => {
     since('The ProductService hasn\'t been created yet.').expect(productServiceExists).toBe(true);
     expect(productDescriptionComponentExists).toBe(true);
-    
+
     mock_backend.connections.subscribe((connection: MockConnection) => {
       let options = new ResponseOptions({
         body: json
@@ -92,7 +92,7 @@ describe('ProductDescription', () => {
 
     since('The artist name in the ProductDescriptionComponent\'s HTML does not match the artist name from the JSON response.').expect(ProductDescriptionFixture.debugElement.nativeElement.querySelector('.band-name').innerText).toEqual(json.artist);
 
-    let htmlString = ""
+    let htmlString = "";
     try {
       htmlString = require('../../app/product-description/product-description.component.html');
     } catch (e) {
@@ -100,12 +100,12 @@ describe('ProductDescription', () => {
     if (htmlString != "") {
       const parser = new DOMParser();
       const htmlDoc = parser.parseFromString(htmlString, 'text/xml');
-      const re = /{{\s*albumInfo\?\.artist\s*}}/
-      since('We\'d like you to query the albumInfo property directly for the artist name, and we\'re not seeing that you\'re doing that.').expect(htmlDoc.querySelector('.band-name').textContent.match(re)).toEqual(jasmine.any(Array));  
+      const re = /{{\s*albumInfo\?\.artist\s*}}/;
+      since('We\'d like you to query the albumInfo property directly for the artist name, and we\'re not seeing that you\'re doing that.').expect(htmlDoc.querySelector('.band-name').textContent.match(re)).toEqual(jasmine.any(Array));
     } else {
       since('We\'d like you to query the albumInfo property directly for the artist name, and we\'re not seeing that you\'re doing that.').expect(0).toBe(1);
     }
-    
+
   }));
 
 });

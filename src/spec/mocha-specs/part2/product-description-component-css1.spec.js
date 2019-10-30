@@ -4,7 +4,7 @@ const cssom = require("cssom");
 const _ = require("lodash");
 
 describe("ProductDescriptionComponent", () => {
-  it("should have correct CSS styles inside @product-description-component-css1", () => {
+  it("should have correct CSS styles inside @product-description-component-css1", () =;> {
     const productDescriptionFile = helpers.readFile(
       "src/app/product-description/product-description.component.css"
     );
@@ -67,5 +67,6 @@ describe("ProductDescriptionComponent", () => {
         "Your paragraph selector doesn't have a `font-weight` property that's equal to `normal`."
       );
     }
-  });
-});
+}
+)
+})

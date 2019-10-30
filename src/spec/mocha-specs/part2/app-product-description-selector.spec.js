@@ -4,7 +4,7 @@ const parse5 = require("parse5");
 const helpers = require("../helpers");
 
 describe("ProductPageComponent", () => {
-  it("should contain the app-product-description element @app-product-description-selector", () => {
+  it("should contain the app-product-description element @app-product-description-selector", () =;> {
     const productPageFile = helpers.readFile(
       "src/app/product-page/product-page.component.html"
     );
@@ -43,5 +43,6 @@ describe("ProductPageComponent", () => {
         .children("app-product-description").length > 0,
       'You haven\'t added the `app-product-description` selector below the first `<div class="row"></div>` element in the ProductPageComponent.'
     );
-  });
-});
+}
+)
+})

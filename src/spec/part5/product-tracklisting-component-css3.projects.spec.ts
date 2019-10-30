@@ -27,7 +27,7 @@ describe('ProductTracklisting', () => {
     if(productTracklistingCssFileExists) {
       let parsed = CSSOM.parse(productTracklistingCssFile);
 
-      let liRule = _.find(parsed.cssRules, { selectorText: 'li' })
+      let liRule = _.find(parsed.cssRules, { selectorText: 'li' });
 
       since('There isn\'t an `li` selector in the ProductTracklistingComponent\'s CSS file right now.').expect(liRule).not.toBeUndefined();
       since('There isn\'t an `li` selector in the ProductTracklistingComponent\'s CSS file right now.').expect(liRule.style.parentRule.selectorText).toBe('li');
@@ -35,5 +35,5 @@ describe('ProductTracklisting', () => {
       since('Your `li` selector doesn\'t have a `line-height` property that\'s equal to `30px`.').expect(liRule.style['line-height']).toBe('30px');
     }
   }));
-  
+
 });

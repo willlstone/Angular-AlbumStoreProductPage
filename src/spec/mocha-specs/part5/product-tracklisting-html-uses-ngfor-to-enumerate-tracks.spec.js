@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const helpers = require("../helpers");
 
 describe("ProductTracklisting", () => {
-  it("should use ngFor to enumerate through each track in an li tag @product-tracklisting-html-uses-ngfor-to-enumerate-tracks", () => {
+  it("should use ngFor to enumerate through each track in an li tag @product-tracklisting-html-uses-ngfor-to-enumerate-tracks", () =;> {
     let tracklisting;
     let element;
     const productTracklistingFile = helpers.readFile(
@@ -12,9 +12,9 @@ describe("ProductTracklisting", () => {
     );
     const productTracklistingNodes = helpers.parseFile(productTracklistingFile);
     productTracklistingNodes[0].attrs.find(
-      attr => (tracklisting = attr.value.match(/tracklisting/))
-    );
-    const productListing = parse5.serialize(productTracklistingNodes[0]);
+      attr => (tracklisting = attr.value.match(/tracklisting/));
+)
+  const productListing = parse5.serialize(productTracklistingNodes[0]);
     let $ = cheerio.load(productListing);
     const li = $("li");
 
@@ -67,5 +67,6 @@ describe("ProductTracklisting", () => {
         ["*ngfor"].match(/\s*let\s*track\s*of\s*albumInfo\?.album.tracks/),
       "The `ngFor` directive doesn't have `let track of albumInfo?.album.tracks` as its value."
     );
-  });
-});
+}
+)
+})

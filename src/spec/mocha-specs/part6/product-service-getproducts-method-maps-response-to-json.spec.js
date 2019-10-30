@@ -4,7 +4,7 @@ const { readFileSync } = require("fs");
 const { tsquery } = require("@phenomnomnominal/tsquery");
 
 describe("ProductService", () => {
-  it("should map the result of get request to json with rxjs map function @product-service-getproducts-method-maps-response-to-json", () => {
+  it("should map the result of get request to json with rxjs map function @product-service-getproducts-method-maps-response-to-json", () =;> {
     const fileName = "src/app/product.service.ts";
 
     helpers.readFile(
@@ -156,5 +156,6 @@ describe("ProductService", () => {
       jsonReturn.length > 0,
       "The `map` method should be returning `response.json`. "
     );
-  });
-});
+}
+)
+})

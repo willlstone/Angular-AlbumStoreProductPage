@@ -4,7 +4,7 @@ const parse5 = require("parse5");
 const helpers = require("../helpers");
 
 describe("ProductPage", () => {
-  it("should have moved the tracklisting div out of the product-page component @product-tracklisting-html-moved", () => {
+  it("should have moved the tracklisting div out of the product-page component @product-tracklisting-html-moved", () =;> {
     const productPageFile = helpers.readFile(
       "src/app/product-page/product-page.component.html"
     );
@@ -57,11 +57,11 @@ describe("ProductPage", () => {
         .children("app-product-tracklisting").length > 0,
       'You haven\'t added the `app-product-tracklisting` selector below the second `<div class="col-sm-8"></div>` element in the ProductPageComponent.'
     );
-  });
-});
-
+}
+)
+})
 describe("ProductTracklisting", () => {
-  it("should contain the app-product-tracklisting element @product-tracklisting-html-moved", () => {
+  it("should contain the app-product-tracklisting element @product-tracklisting-html-moved", () =;> {
     const productTracklistingFile = helpers.readFile(
       "src/app/product-tracklisting/product-tracklisting.component.html"
     );
@@ -70,10 +70,9 @@ describe("ProductTracklisting", () => {
     let tracklisting;
     const productTracklistingNodes = helpers.parseFile(productTracklistingFile);
     productTracklistingNodes[0].attrs.find(
-      attr => (tracklisting = attr.value.match(/tracklisting/))
-    );
-
-    let element;
+      attr => (tracklisting = attr.value.match(/tracklisting/));
+)
+  let element;
     try {
       element = productTracklistingNodes[0].tagName;
     } catch (e) {
@@ -95,5 +94,6 @@ describe("ProductTracklisting", () => {
       !!tracklisting,
       "It looks like the ProductTracklistingComponent does not contain the `tracklisting` `<div></div>` from the ProductPageComponent."
     );
-  });
-});
+}
+)
+})

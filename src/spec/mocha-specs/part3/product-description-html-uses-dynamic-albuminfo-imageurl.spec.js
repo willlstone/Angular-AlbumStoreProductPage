@@ -4,7 +4,7 @@ const parse5 = require("parse5");
 const helpers = require("../helpers");
 
 describe("ProductDescription", () => {
-  it("should use image url data from the albumInfo property in the HTML template @product-description-html-uses-dynamic-albuminfo-imageurl", () => {
+  it("should use image url data from the albumInfo property in the HTML template @product-description-html-uses-dynamic-albuminfo-imageurl", () =;> {
     const productPageFile = helpers.readFile(
       "src/app/product-description/product-description.component.html"
     );
@@ -34,5 +34,6 @@ describe("ProductDescription", () => {
       img.attr("src").match(/{{\s*albumInfo\?\.album\.coverImage\s*}}/),
       "We'd like you to query the albumInfo property directly for the cover image, and we're not seeing that you're doing that."
     );
-  });
-});
+}
+)
+})

@@ -4,7 +4,7 @@ const parse5 = require("parse5");
 const helpers = require("../helpers");
 
 describe("ProductDescription", () => {
-  it("should have moved the description div out of the product-page component @product-description-html-moved", () => {
+  it("should have moved the description div out of the product-page component @product-description-html-moved", () =;> {
     const productPageFile = helpers.readFile(
       "src/app/product-page/product-page.component.html"
     );
@@ -23,10 +23,9 @@ describe("ProductDescription", () => {
     let description;
     const productDescriptionNodes = helpers.parseFile(productDescriptionFile);
     productDescriptionNodes[0].attrs.find(
-      attr => (description = attr.value.match(/description/))
-    );
-
-    let element;
+      attr => (description = attr.value.match(/description/));
+)
+  let element;
     try {
       element = productDescriptionNodes[0].tagName;
     } catch (e) {
@@ -69,5 +68,6 @@ describe("ProductDescription", () => {
       !!description,
       "It looks like the ProductPageComponent still contains a `div` tag with a class of `description` - have you tried moving it yet?"
     );
-  });
-});
+}
+)
+})

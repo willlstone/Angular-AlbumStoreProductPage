@@ -1,25 +1,25 @@
 let fs = require('fs');
-let expect = require('chai').expect
-let assert = require('chai').assert
+let expect = require('chai').expect;
+let assert = require('chai').assert;
 
 describe('Track Interface', function () {
   it(`should have trackNumber property of type number @track-interface-has-four-properties`, function () {
-    let file
+    let file;
     try {
       file = fs.readFileSync(__dirname + '/../../../app/track.ts').toString();
     } catch (e) {
       assert(false, "The Track interface doesn't exist yet.")
     }
-    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
+    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/;
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `track.ts` file, but it doesn't export an interface named `Track`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -28,9 +28,9 @@ describe('Track Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let trackNumberKeyFound = false
-      , trackNumberValueFound = false
+      , trackNumberValueFound = false;
     for (let i = 0; i < properties.length; i++) {
       if (properties[i].key == 'trackNumber') {
         trackNumberKeyFound = true;
@@ -44,22 +44,22 @@ describe('Track Interface', function () {
   });
 
   it(`should have trackName property of type string @track-interface-has-four-properties`, function () {
-    let file
+    let file;
     try {
       file = fs.readFileSync(__dirname + '/../../../app/track.ts').toString();
     } catch (e) {
       assert(false, "The Track interface doesn't exist yet.")
     }
-    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
+    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/;
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `track.ts` file, but it doesn't export an interface named `Track`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -68,9 +68,9 @@ describe('Track Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let trackNameKeyFound = false
-      , trackNameValueFound = false
+      , trackNameValueFound = false;
     for (let i = 0; i < properties.length; i++) {
       if (properties[i].key == 'trackName') {
         trackNameKeyFound = true;
@@ -84,22 +84,22 @@ describe('Track Interface', function () {
   });
 
   it(`should have trackLength property of type string @track-interface-has-four-properties`, function () {
-    let file
+    let file;
     try {
       file = fs.readFileSync(__dirname + '/../../../app/track.ts').toString();
     } catch (e) {
       assert(false, "The Track interface doesn't exist yet.")
     }
-    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
+    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/;
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `track.ts` file, but it doesn't export an interface named `Track`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -108,9 +108,9 @@ describe('Track Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let trackLengthKeyFound = false
-      , trackLengthValueFound = false
+      , trackLengthValueFound = false;
     for (let i = 0; i < properties.length; i++) {
       if (properties[i].key == 'trackLength') {
         trackLengthKeyFound = true;
@@ -123,22 +123,22 @@ describe('Track Interface', function () {
     assert(trackLengthValueFound, "The Track Interface's `trackLength` property isn't typed as `string`.");
   });
   it(`should have trackPrice property of type number @track-interface-has-four-properties`, function () {
-    let file
+    let file;
     try {
       file = fs.readFileSync(__dirname + '/../../../app/track.ts').toString();
     } catch (e) {
       assert(false, "The Track interface doesn't exist yet.")
     }
-    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/
+    let re = /export\s+interface\s+Track\s*\{\s*([\w\s\:\;\[\]]+)\s*\}/;
     let match = file.match(re);
     assert(Array.isArray(match) && match != null, "There's a `track.ts` file, but it doesn't export an interface named `Track`.");
-    
+
     let arr = match[1].split('\n');
     for (let i = 0; i < arr.length; i++) {
       arr[i] = arr[i].trim();
     }
 
-    let properties = [];    
+    let properties = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].trim().length > 0) {
         let obj = {};
@@ -147,9 +147,9 @@ describe('Track Interface', function () {
         properties[i] = obj;
       }
     }
-    
+
     let trackPriceKeyFound = false
-      , trackPriceValueFound = false
+      , trackPriceValueFound = false;
     for (let i = 0; i < properties.length; i++) {
       if (properties[i].key == 'trackPrice') {
         trackPriceKeyFound = true;

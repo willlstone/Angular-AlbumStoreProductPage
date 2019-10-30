@@ -27,7 +27,7 @@ describe('ProductTracklisting', () => {
     if(productTracklistingCssFileExists) {
       let parsed = CSSOM.parse(productTracklistingCssFile);
 
-      let tRule = _.find(parsed.cssRules, { selectorText: '.tracklisting' })
+      let tRule = _.find(parsed.cssRules, { selectorText: '.tracklisting' });
 
       since('There isn\'t a `.tracklisting` selector in the ProductTracklistingComponent\'s CSS file right now.').expect(tRule).not.toBeUndefined();
       since('There isn\'t a `.tracklisting` selector in the ProductTracklistingComponent\'s CSS file right now.').expect(tRule.style.parentRule.selectorText).toBe('.tracklisting');
@@ -42,5 +42,5 @@ describe('ProductTracklisting', () => {
       }
     }
   }));
-  
+
 });

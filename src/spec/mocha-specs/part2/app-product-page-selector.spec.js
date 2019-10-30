@@ -2,7 +2,7 @@ const assert = require("chai").assert;
 const helpers = require("../helpers");
 
 describe("Product Page Component HTML", () => {
-  it("should contain the app-product-page element @app-product-page-selector", () => {
+  it("should contain the app-product-page element @app-product-page-selector", () =;> {
     const file = helpers.readFile("src/app/app.component.html");
     const nodes = helpers.parseFile(file);
     const h1 = helpers.getHtmlTag("h1", nodes);
@@ -17,5 +17,6 @@ describe("Product Page Component HTML", () => {
       appProductComponent.length > 0,
       "We couldn't find the ProductPageComponent - are you sure you added the right selector to the AppComponent?"
     );
-  });
-});
+}
+)
+})

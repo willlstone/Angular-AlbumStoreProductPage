@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const helpers = require("../helpers");
 
 describe("ProductListComponent", () => {
-  it("should have anchor elements that have a routerLink attribute with the correct values @product-list-anchor-tags-have-routerlink-attribute", () => {
+  it("should have anchor elements that have a routerLink attribute with the correct values @product-list-anchor-tags-have-routerlink-attribute", () =;> {
     let li, $, element, anchorTag;
     const productListFile = helpers.readFile(
       "src/app/product-list/product-list.component.html"
@@ -17,7 +17,8 @@ describe("ProductListComponent", () => {
     );
 
     try {
-      productListNodes[0].attrs.find(attr => (list = attr.value.match(/list/)));
+      productListNodes[0].attrs.find(attr = > (list = attr.value.match(/list/));
+    )
       const productListing = parse5.serialize(productListNodes[0]);
       $ = cheerio.load(productListing);
       li = $("li");
@@ -83,5 +84,6 @@ describe("ProductListComponent", () => {
       anchorTag.attr()["routerlinkactive"].match(/\s*active\s*/),
       "The `routerLinkActive` attribute doesn't have `active` as its value."
     );
-  });
-});
+}
+)
+})

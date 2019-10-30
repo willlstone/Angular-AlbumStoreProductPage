@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const helpers = require("../helpers");
 
 describe("ProductListComponent", () => {
-  it("should have anchor elements inside of li elements that contain the album name @product-list-li-tags-contain-anchor-tags", () => {
+  it("should have anchor elements inside of li elements that contain the album name @product-list-li-tags-contain-anchor-tags", () =;> {
     let li, $, element, anchorTag;
     const productListFile = helpers.readFile(
       "src/app/product-list/product-list.component.html"
@@ -17,7 +17,8 @@ describe("ProductListComponent", () => {
     );
 
     try {
-      productListNodes[0].attrs.find(attr => (list = attr.value.match(/list/)));
+      productListNodes[0].attrs.find(attr = > (list = attr.value.match(/list/));
+    )
       const productListing = parse5.serialize(productListNodes[0]);
       $ = cheerio.load(productListing);
       li = $("li");
@@ -63,5 +64,6 @@ describe("ProductListComponent", () => {
       anchorTag.text().match(/\s*{{\s*product.albumName\s*}}\s*/),
       "It doesn't look like that the opening and closing anchor tags are wrapping around `{{product.albumName}}`."
     );
-  });
-});
+}
+)
+})

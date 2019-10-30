@@ -27,7 +27,7 @@ describe('ProductDescriptionComponent', () => {
     if(productDescriptionCssFileExists) {
       let parsed = CSSOM.parse(productDescriptionCssFile);
 
-      let pRule = _.find(parsed.cssRules, { selectorText: 'p' })
+      let pRule = _.find(parsed.cssRules, { selectorText: 'p' });
 
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule).not.toBeUndefined();
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule.style.parentRule.selectorText).toBe('p');
@@ -40,7 +40,7 @@ describe('ProductDescriptionComponent', () => {
     if(productDescriptionCssFileExists) {
       let parsed = CSSOM.parse(productDescriptionCssFile);
 
-      let pRule = _.find(parsed.cssRules, { selectorText: 'p' })
+      let pRule = _.find(parsed.cssRules, { selectorText: 'p' });
 
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule).not.toBeUndefined();
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule.style.parentRule.selectorText).toBe('p');
@@ -60,7 +60,7 @@ describe('ProductDescriptionComponent', () => {
         }
         since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[0]).toBe('Helvetica');
         since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[1]).toBe('Arial');
-        since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[2]).toBe('sans-serif');        
+        since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[2]).toBe('sans-serif');
       }
     }
   }));
@@ -70,7 +70,7 @@ describe('ProductDescriptionComponent', () => {
     if(productDescriptionCssFileExists) {
       let parsed = CSSOM.parse(productDescriptionCssFile);
 
-      let pRule = _.find(parsed.cssRules, { selectorText: 'p' })
+      let pRule = _.find(parsed.cssRules, { selectorText: 'p' });
 
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule).not.toBeUndefined();
       since('There isn\'t a paragraph selector in the ProductDescriptionComponent\'s CSS file right now.').expect(pRule.style.parentRule.selectorText).toBe('p');

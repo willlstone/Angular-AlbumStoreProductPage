@@ -27,7 +27,8 @@ const parseFile = function(file) {
 };
 
 const getHtmlTag = function(tagName, nodes) {
-  return nodes.filter(node => node.nodeName === tagName);
+  return nodes.filter(node = > node.nodeName === tagName;
+)
 };
 
 module.exports.readFile = readFile;

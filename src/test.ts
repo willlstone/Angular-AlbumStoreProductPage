@@ -30,13 +30,13 @@ getTestBed().initTestEnvironment(
 );
 
 // load all tests, and then filter into specFiles array if the test path matches the `part#` passed in as an argument into the variable `part`
-const context = require.context('./', true, /projects\.spec\.ts/)
+const context = require.context('./', true, /projects\.spec\.ts/);
 let specFiles = context.keys().filter((path) => {
-  let filterRegExp = (part) ? new RegExp(part, 'g') : /projects\.spec\.ts/g
+  let filterRegExp = (part) ? new RegExp(part, 'g') : /projects\.spec\.ts/g;
   return filterRegExp.test(path)
-})
+});
 
 // and load the modules.
-specFiles.map(context)
+specFiles.map(context);
 // finally, start Karma to run the tests.
 __karma__.start();

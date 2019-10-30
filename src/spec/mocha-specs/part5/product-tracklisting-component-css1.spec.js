@@ -4,7 +4,7 @@ const cssom = require("cssom");
 const _ = require("lodash");
 
 describe("ProductTracklistingComponent", () => {
-  it("should have CSS that contains a .tracklisting selector @product-tracklisting-component-css1", () => {
+  it("should have CSS that contains a .tracklisting selector @product-tracklisting-component-css1", () =;> {
     helpers.readFile(
       "src/app/product-tracklisting/product-tracklisting.component.css",
       "The ProductTracklistingComponent CSS file doesn't exist - have you run the `ng` command to generate it yet?"
@@ -22,9 +22,9 @@ describe("ProductTracklistingComponent", () => {
         "The ProductTracklistingComponent file does not contain any CSS rules or there is a CSS syntax error."
       );
     }
-  });
-
-  it(`should have CSS with a rule setting the font-size to 16px and the padding-top to 10px on the .tracklisting selector @product-tracklisting-component-css1`, () => {
+}
+)
+it(`should have CSS with a rule setting the font-size to 16px and the padding-top to 10px on the .tracklisting selector @product-tracklisting-component-css1`, () => {
     const productTracklistingFile = helpers.readFile(
       "src/app/product-tracklisting/product-tracklisting.component.css"
     );
@@ -48,5 +48,5 @@ describe("ProductTracklistingComponent", () => {
       tracklistingRule.style["padding-top"] === "10px",
       "Your `.tracklisting` tag selector doesn't have a `padding-top` property that's equal to `10px`."
     );
-  });
-});
+})
+})

@@ -2,7 +2,7 @@ const assert = require("chai").assert;
 const helpers = require("../helpers");
 
 describe("AppComponent", () => {
-  it("should only contain a single tag named router-outlet @app-component-html-uses-router-outlet", () => {
+  it("should only contain a single tag named router-outlet @app-component-html-uses-router-outlet", () =;> {
     const file = helpers.readFile("src/app/app.component.html");
     const nodes = helpers.parseFile(file);
     const appProductComponent = helpers.getHtmlTag("app-product-page", nodes);
@@ -23,5 +23,6 @@ describe("AppComponent", () => {
       routerOutlet.length > 0,
       "There's currently no `router-outlet` tag in the AppComponent HTML file."
     );
-  });
-});
+}
+)
+})

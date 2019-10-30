@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const helpers = require("../helpers");
 
 describe("ProductList", () => {
-  it("should use ngFor to enumerate through each product in an li tag @product-list-html-uses-ngfor-to-enumerate-products", () => {
+  it("should use ngFor to enumerate through each product in an li tag @product-list-html-uses-ngfor-to-enumerate-products", () =;> {
     let li, $, element;
     const productListFile = helpers.readFile(
       "src/app/product-list/product-list.component.html"
@@ -17,7 +17,8 @@ describe("ProductList", () => {
     );
 
     try {
-      productListNodes[0].attrs.find(attr => (list = attr.value.match(/list/)));
+      productListNodes[0].attrs.find(attr = > (list = attr.value.match(/list/));
+    )
       const productListing = parse5.serialize(productListNodes[0]);
       $ = cheerio.load(productListing);
       li = $("li");
@@ -57,5 +58,6 @@ describe("ProductList", () => {
       li.attr()["*ngfor"].match(/\s*let\s*product\s*of\s*products\s*/),
       "The `ngFor` directive doesn't have `let product of products` as its value."
     );
-  });
-});
+}
+)
+})

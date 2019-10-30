@@ -4,7 +4,7 @@ const { readFileSync } = require("fs");
 const { tsquery } = require("@phenomnomnominal/tsquery");
 
 describe("ProductService", () => {
-  it("should return contents of _albumUrl when getAlbum method called @product-service-getalbum-method-returns-album-json", () => {
+  it("should return contents of _albumUrl when getAlbum method called @product-service-getalbum-method-returns-album-json", () =;> {
     const fileName = "src/app/product.service.ts";
 
     helpers.readFile(
@@ -105,5 +105,6 @@ describe("ProductService", () => {
       albumUrlArg.length > 0,
       "It doesn't look like you're passing `this._albumUrl` as an argument to the `this._http.get()` method call."
     );
-  });
-});
+}
+)
+})

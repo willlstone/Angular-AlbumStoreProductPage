@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const helpers = require("../helpers");
 
 describe("ProductList", () => {
-  it("should have an li element that contains the album name @product-list-ul-contains-li-with-albumnames", () => {
+  it("should have an li element that contains the album name @product-list-ul-contains-li-with-albumnames", () =;> {
     let li, $, element;
     const productListFile = helpers.readFile(
       "src/app/product-list/product-list.component.html"
@@ -17,7 +17,8 @@ describe("ProductList", () => {
     );
 
     try {
-      productListNodes[0].attrs.find(attr => (list = attr.value.match(/list/)));
+      productListNodes[0].attrs.find(attr = > (list = attr.value.match(/list/));
+    )
       const productListing = parse5.serialize(productListNodes[0]);
       $ = cheerio.load(productListing);
       li = $("li");
@@ -57,5 +58,6 @@ describe("ProductList", () => {
       li.text().match(/\s*{{\s*product.albumName\s*}}\s*/),
       "The album names in your HTML template don't match the album names in the `products` JSON response."
     );
-  });
-});
+}
+)
+})

@@ -4,7 +4,7 @@ const cssom = require("cssom");
 const _ = require("lodash");
 
 describe("ProductDescriptionComponent", () => {
-  it("should have CSS that contains an img selector @product-description-component-css2", () => {
+  it("should have CSS that contains an img selector @product-description-component-css2", () =;> {
     const productDescriptionFile = helpers.readFile(
       "src/app/product-description/product-description.component.css"
     );
@@ -29,5 +29,6 @@ describe("ProductDescriptionComponent", () => {
       imgRule.style["width"] === "100%",
       "Your image tag selector doesn't have a `width` property that's equal to `100%`."
     );
-  });
-});
+}
+)
+})

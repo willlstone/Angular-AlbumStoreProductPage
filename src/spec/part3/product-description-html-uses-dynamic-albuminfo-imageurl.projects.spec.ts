@@ -39,9 +39,9 @@ try {
 }
 
 class AProductService {
-  
+
 }
-  
+
 describe('ProductDescription', () => {
 
   let product_service;
@@ -92,7 +92,7 @@ describe('ProductDescription', () => {
 
     since('The cover image in the ProductDescriptionComponent\'s HTML does not match the cover image from the JSON response.').expect(ProductDescriptionFixture.debugElement.nativeElement.querySelector('img').getAttribute('src')).toEqual(json.album.coverImage);
 
-    let htmlString = ""
+    let htmlString = "";
     try {
       htmlString = require('../../app/product-description/product-description.component.html');
     } catch (e) {
@@ -100,12 +100,12 @@ describe('ProductDescription', () => {
     if (htmlString != "") {
       const parser = new DOMParser();
       const htmlDoc = parser.parseFromString(htmlString, 'text/xml');
-      const re = /{{\s*albumInfo\?\.album\.coverImage\s*}}/
+      const re = /{{\s*albumInfo\?\.album\.coverImage\s*}}/;
       since('We\'d like you to query the albumInfo property directly for the cover image, and we\'re not seeing that you\'re doing that.').expect(htmlDoc.querySelector('img').getAttribute('src').match(re)).toEqual(jasmine.any(Array));
     } else {
       since('We\'d like you to query the albumInfo property directly for the cover image, and we\'re not seeing that you\'re doing that.').expect(0).toBe(1);
     }
-    
+
   }));
 
 });

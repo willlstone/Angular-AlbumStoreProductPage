@@ -26,12 +26,12 @@ describe('ProductDescriptionComponent', () => {
     since('The ProductDescriptionComponent hasn\'t been created yet.').expect(productDescriptionCssFileExists).toBe(true);
     if(productDescriptionCssFileExists) {
       let parsed = CSSOM.parse(productDescriptionCssFile);
-      let imgRule = _.find(parsed.cssRules, { selectorText: 'img' })
+      let imgRule = _.find(parsed.cssRules, { selectorText: 'img' });
 
       since('There isn\'t an image tag selector in the ProductDescriptionComponent\'s CSS file right now.').expect(imgRule).not.toBeUndefined();
       since('There isn\'t an image tag selector in the ProductDescriptionComponent\'s CSS file right now.').expect(imgRule.style.parentRule.selectorText).toBe('img');
       since('Your image tag selector doesn\'t have a `width` property that\'s equal to `100%`.').expect(imgRule.style['width']).toBe('100%');
     }
   }));
-  
+
 });
